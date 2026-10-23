@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lashed by Miracle</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500;600&display=swap">
+<style>
+body{margin:0}
+img{max-width:100%}
+/* Layout: black stage, cheetah-print bands on the header and closing call-to-action, gold hairlines and one gold Book button repeated. Single dark look by choice (her brand is black, gold and cheetah). */
+:root{
+  --ink:#0b0907;
+  --panel:#15110c;
+  --line:#3a2f1c;
+  --gold:#d9ad5b;
+  --gold-soft:#f0d79b;
+  --blush:#e9b9bd;        /* small girly accent */
+  --text:#f3ece0;
+  --muted:#a89c86;
+  --display:"Cormorant Garamond",Georgia,serif;
+  --body:"Jost",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --cheetah:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' fill='%23171009'/%3E%3Cg fill='none' stroke-linecap='round'%3E%3Cg transform='translate(34 30) rotate(20)'%3E%3Cellipse rx='15' ry='10' fill='%232a1c0d'/%3E%3Cpath d='M-18 -2 A18 13 0 0 1 12 -12' stroke='%23c99a4a' stroke-width='4' opacity='.55'/%3E%3C/g%3E%3Cg transform='translate(120 24) rotate(-35)'%3E%3Cellipse rx='13' ry='9' fill='%232a1c0d'/%3E%3Cpath d='M-16 3 A16 12 0 0 0 10 11' stroke='%23c99a4a' stroke-width='4' opacity='.55'/%3E%3C/g%3E%3Cg transform='translate(80 78) rotate(55)'%3E%3Cellipse rx='16' ry='10' fill='%232a1c0d'/%3E%3Cpath d='M-19 -3 A19 13 0 0 1 14 -11' stroke='%23c99a4a' stroke-width='4' opacity='.55'/%3E%3C/g%3E%3Cg transform='translate(150 92) rotate(10)'%3E%3Cellipse rx='12' ry='8' fill='%232a1c0d'/%3E%3Cpath d='M-15 2 A15 11 0 0 0 9 10' stroke='%23c99a4a' stroke-width='4' opacity='.55'/%3E%3C/g%3E%3Cg transform='translate(28 128) rotate(-20)'%3E%3Cellipse rx='14' ry='9' fill='%232a1c0d'/%3E%3Cpath d='M-17 -2 A17 12 0 0 1 11 -11' stroke='%23c99a4a' stroke-width='4' opacity='.55'/%3E%3C/g%3E%3Cg transform='translate(98 150) rotate(40)'%3E%3Cellipse rx='15' ry='10' fill='%232a1c0d'/%3E%3Cpath d='M-18 3 A18 13 0 0 0 12 12' stroke='%23c99a4a' stroke-width='4' opacity='.55'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+.wrap{max-width:720px;margin:0 auto}
+.sample{max-width:720px;margin:0 auto;padding:10px 0;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:center;border-bottom:1px solid var(--line)}
+.sample b{color:var(--gold);font-weight:500}
+.hero{margin:20px 0 0;border:1px solid var(--line);background:var(--cheetah);background-size:180px 180px;position:relative}
+.hero-in{background:linear-gradient(180deg,rgba(11,9,7,.78),rgba(11,9,7,.9));padding:56px 20px 44px;text-align:center}
+.logo{font-family:var(--display);font-style:italic;font-weight:600;font-size:clamp(46px,12.5vw,76px);line-height:1;color:var(--gold-soft);margin:0;text-wrap:balance}
+.logo span{display:block;font-family:var(--body);font-style:normal;font-weight:500;font-size:12px;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);margin-top:14px}
+.tag{margin:26px auto 0;max-width:30ch;color:var(--text);font-size:18px}
+.tag em{font-family:var(--display);font-size:22px;color:var(--blush)}
+.btn{display:inline-block;margin-top:28px;padding:14px 34px;border:1px solid var(--gold);background:var(--gold);color:var(--ink);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:13px;text-decoration:none}
+.btn:hover{background:var(--gold-soft)}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--gold-soft);outline-offset:3px}
+.btn.ghost{background:transparent;color:var(--gold)}
+.btn.ghost:hover{background:var(--panel)}
+.loc{margin-top:18px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+section{padding:40px 0;border-top:1px solid var(--line)}
+.hero + section{border-top:0}
+h2{font-family:var(--display);font-weight:600;font-style:italic;font-size:34px;line-height:1.15;margin:0 0 6px;color:var(--gold-soft);text-wrap:balance}
+.sub{margin:0 0 24px;color:var(--muted)}
+.special{background:var(--panel);border:1px solid var(--line);padding:22px;display:grid;gap:6px}
+.special .k{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--blush)}
+.special .big{font-family:var(--display);font-style:italic;font-size:32px;font-weight:600;color:var(--gold-soft);line-height:1.1}
+.menu{list-style:none;margin:0;padding:0;border:1px solid var(--line);background:var(--panel)}
+.menu li{display:flex;gap:16px;justify-content:space-between;align-items:baseline;padding:17px 20px;border-bottom:1px solid var(--line)}
+.menu li:last-child{border-bottom:0}
+.menu .n{min-width:0}
+.menu .n strong{display:block;font-weight:500;font-size:18px}
+.menu .n span{color:var(--muted);font-size:14px}
+.price{font-family:var(--display);font-size:26px;font-weight:600;color:var(--gold);white-space:nowrap;font-variant-numeric:tabular-nums}
+.note{margin:12px 0 0;font-size:13px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.ph{aspect-ratio:4/5;max-width:100%;border:1px dashed var(--line);display:grid;place-items:center;text-align:center;padding:12px;color:var(--muted);font-size:13px;background:var(--cheetah);background-size:120px 120px;position:relative}
+.ph span{background:rgba(11,9,7,.82);padding:6px 10px}
+.pol{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.pol div{border:1px solid var(--line);background:var(--panel);padding:18px}
+.pol h3{margin:0 0 6px;font-family:var(--display);font-style:italic;font-weight:600;font-size:22px;color:var(--gold-soft)}
+.pol p{margin:0;color:var(--muted);font-size:14px}
+.ceo{display:grid;gap:8px}
+.ceo p{margin:0;color:var(--muted)}
+.cta{margin:0 0 0;padding:0;border-top:0}
+.cta-box{border:1px solid var(--line);background:var(--cheetah);background-size:180px 180px}
+.cta-in{background:linear-gradient(180deg,rgba(11,9,7,.8),rgba(11,9,7,.92));padding:52px 20px;text-align:center}
+.cta h2{font-size:40px}
+.contact{display:flex;gap:12px 28px;justify-content:center;flex-wrap:wrap;margin-top:24px;font-size:14px;color:var(--muted)}
+.contact a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)}
+footer{padding:24px 0 32px;text-align:center;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.btn{transition:background .2s}}
+</style>
+</head>
+<body>
+<div class="sample"><b>Sample preview</b> &nbsp;·&nbsp; prices and photos are placeholders until you confirm them</div>
+
+<div class="wrap">
+<div class="hero"><div class="hero-in">
+  <h1 class="logo">Lashed by Miracle<span>Lash Services · East Flatbush, Brooklyn</span></h1>
+  <p class="tag">Volume, wispy and wet sets with a <em>luxury</em> touch.</p>
+  <a class="btn" href="https://lashedbymiracle.as.me" target="_blank" rel="noopener">Book now</a>
+  <div class="loc">East Flatbush · Brooklyn, NY 11203</div>
+</div></div>
+
+<section id="fall">
+  <div class="special">
+    <span class="k">This season</span>
+    <span class="big">Fall Into Lashes</span>
+    <span>Book your fall appointment. October sale and $90 Fridays while spots last.</span>
+  </div>
+  <p class="note">Edit the offer text and dates whenever your promo changes.</p>
+</section>
+
+<section id="services">
+  <h2>Lash services &amp; prices</h2>
+  <p class="sub">Choose your set, then tap Book now to pick a time.</p>
+  <ul class="menu">
+    <li><div class="n"><strong>Volume set</strong><span>Full, fluffy and dramatic</span></div><div class="price">$—</div></li>
+    <li><div class="n"><strong>Wispy set</strong><span>Soft, textured, feathery</span></div><div class="price">$—</div></li>
+    <li><div class="n"><strong>Wet set</strong><span>Glossy, defined spikes</span></div><div class="price">$—</div></li>
+    <li><div class="n"><strong>$90 Friday set</strong><span>Limited Friday spots</span></div><div class="price">$90</div></li>
+    <li><div class="n"><strong>Fills</strong><span>Keep your set fresh</span></div><div class="price">$—</div></li>
+  </ul>
+  <p class="note">Send your current prices and they replace the $— marks.</p>
+  <a class="btn ghost" href="https://lashedbymiracle.as.me" target="_blank" rel="noopener">See open times</a>
+</section>
+
+<section id="work">
+  <h2>Client cam</h2>
+  <p class="sub">Recent sets, straight from your Instagram.</p>
+  <div class="grid">
+    <div class="ph"><span>Your photo here</span></div>
+    <div class="ph"><span>Your photo here</span></div>
+    <div class="ph"><span>Your photo here</span></div>
+    <div class="ph"><span>Your photo here</span></div>
+  </div>
+</section>
+
+<section id="policies">
+  <h2>Our policy</h2>
+  <p class="sub">Please read before booking. It keeps every appointment smooth.</p>
+  <div class="pol">
+    <div><h3>Deposit</h3><p>Add your deposit amount and how it applies to the set.</p></div>
+    <div><h3>Cancellations</h3><p>Add how much notice you need and what happens if it is missed.</p></div>
+    <div><h3>Late arrivals</h3><p>Add your grace period and what happens after it.</p></div>
+    <div><h3>Fills &amp; aftercare</h3><p>Add your fill window and your first 24 hour rules.</p></div>
+  </div>
+</section>
+
+<section id="ceo" class="ceo">
+  <h2>Meet the CEO</h2>
+  <p>Add two or three lines about you: your story, your training and what clients can expect when they sit in your chair.</p>
+</section>
+
+<section class="cta">
+  <div class="cta-box"><div class="cta-in">
+    <h2>Ready for your set?</h2>
+    <p class="sub">Pick your day and time in under a minute.</p>
+    <a class="btn" href="https://lashedbymiracle.as.me" target="_blank" rel="noopener">Book now</a>
+    <div class="contact">
+      <span>East Flatbush · Brooklyn, NY 11203</span>
+      <a href="https://www.instagram.com/lashedby.miracle" target="_blank" rel="noopener">@lashedby.miracle</a>
+    </div>
+  </div></div>
+</section>
+
+<footer>© Lashed by Miracle</footer>
+</div>
+</body>
+</html>
